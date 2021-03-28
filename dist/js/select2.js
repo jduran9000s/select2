@@ -5077,13 +5077,8 @@ S2.define('select2/defaults',[
     }
 
     if (options.dropdownAdapter == null) {
-      if (options.multiple) {
-        options.dropdownAdapter = Dropdown;
-      } else {
-        var SearchableDropdown = Utils.Decorate(Dropdown, DropdownSearch);
-
-        options.dropdownAdapter = SearchableDropdown;
-      }
+      var SearchableDropdown = Utils.Decorate(Dropdown, DropdownSearch);
+      options.dropdownAdapter = SearchableDropdown;
 
       if (options.minimumResultsForSearch !== 0) {
         options.dropdownAdapter = Utils.Decorate(
@@ -5134,12 +5129,12 @@ S2.define('select2/defaults',[
         );
       }
 
-      if (options.multiple) {
-        options.selectionAdapter = Utils.Decorate(
-          options.selectionAdapter,
-          SelectionSearch
-        );
-      }
+      // if (options.multiple) {
+      //   options.selectionAdapter = Utils.Decorate(
+      //     options.selectionAdapter,
+      //     SelectionSearch
+      //   );
+      // }
 
       if (options.selectionCssClass != null) {
         options.selectionAdapter = Utils.Decorate(
