@@ -240,6 +240,7 @@ form.was-validated select:valid ~ .select2-container .select2-selection {
   float: left;
   font-weight: 700;
   color: #862d36;
+  margin: 0;
 }
 
 .select2-container .select2-selection--multiple .select2-selection__choice__remove:hover {
